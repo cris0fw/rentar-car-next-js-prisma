@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import ListLovedCars from "./components/ListLovedCars";
 import { auth } from "@clerk/nextjs/server";

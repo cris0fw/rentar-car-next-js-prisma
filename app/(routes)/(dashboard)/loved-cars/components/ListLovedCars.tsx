@@ -1,4 +1,4 @@
-"use client ";
+"use client";
 import React from "react";
 import { useLovedCars } from "@/hooks/use-loved-cars";
 import { Car } from "@prisma/client";

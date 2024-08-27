@@ -3,6 +3,7 @@ import { db } from "@/lib/db";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { isAdministrator } from "@/lib/isAdministrator";
+import TableReservesAdmin from "./components/TableReservesAdmin/TableReservesAdmin";
 
 const pageReservesAdmin = async () => {
   const { userId } = auth();
@@ -18,7 +19,11 @@ const pageReservesAdmin = async () => {
     },
   });
 
-  return <div>page</div>;
+  return (
+    <div>
+      <TableReservesAdmin orders={orders} />
+    </div>
+  );
 };
 
 export default pageReservesAdmin;
